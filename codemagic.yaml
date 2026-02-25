@@ -3,7 +3,6 @@ workflows:
       environment:
             flutter: stable
       scripts:
-            - cd nohelia_app
             - flutter pub get
             - flutter build apk --release
       artifacts:
