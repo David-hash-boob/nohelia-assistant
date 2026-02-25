@@ -1,17 +1,10 @@
 worckflows:
-  build:
-    name: Build and test
-    max_build_duration: 60
+  android-worckflow:
     environment:
-      flutter: stable
-      xcode: latest
+      fluter: stable
     scripts:
-      - name: Install dependencies
-        script: |
-          flutter pub get
-      - name: Run tests
-        script: |
-          flutter test
-      - name: build apk
-        script: |
-          flutter build apk --release
+      - cd nohelia_app
+      - flutter pub get
+      - flutter build apk --release
+    artifacts:
+      - nohelia_app/build/app/outputs/flutter-apk/app-realease.apk
