@@ -3,7 +3,10 @@ workflows:
       environment:
             flutter: stable
       scripts:
-            - cd nohelia_app
+            - echo "Current directory"
+            - pwd
+            - ls -la
+            - cd nohelia_app || true
             - flutter pub get
             - flutter build apk --release
       artifacts:
