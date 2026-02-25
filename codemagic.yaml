@@ -1,10 +1,10 @@
-worckflows:
-  android-worckflow:
-    environment:
-      fluter: stable
-    scripts:
-      - cd nohelia_app
-      - flutter pub get
-      - flutter build apk --release
-    artifacts:
-      - nohelia_app/build/app/outputs/flutter-apk/app-realease.apk
+workflows:
+  android-workflow:
+      environment:
+            flutter: stable
+                scripts:
+                      - cd nohelia_app
+                            - flutter pub get
+                                  - flutter build apk --release
+                                      artifacts:
+                                            - nohelia_app/build/app/outputs/flutter-apk/app-release.apk
